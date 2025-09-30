@@ -1,313 +1,160 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<html>
+	
+<title>Jeremy Carlot</title>
+<meta name="Description" content="Jeremy Carlot website to release papers, up-to-date resume, and news about projects ongoing,
+								  Jeremy Carlot, Jérémy Carlot, Jeremy T. Carlot, Jérémy T. Carlot, Jeremy, 
+								  Jérémy, Carlot, Jeremy Carlot website, Jérémy Carlot website,
+								  Postdoctoral fellow, Functional benthic ecology, Functional ecology, 
+								  Benthic ecology, juvenile, scaling-up, structural complexity, 
+								  CCA, Corals, Benthos, Global change">
+<meta name="Author" content="Jeremy Carlot">
+<meta name="Reply-To" content="jay.crlt02@gmail.com">
+<meta name="Robots" content="index, follow">
+<meta name="Rating" content="general">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="Icons/sea.ico">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="dottmann">
-
-<title>index</title>
 <style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Avenir Light";}
+body, html {height: 100%; color: #777;line-height: 1.8;}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;}
+/* Second image (Portfolio) */
+.bgimg-2 {background-image: url("Pictures/My_pictures/GPS.jpeg");min-height: 400px;}
+/* Third image (Contact) */
+.bgimg-3 {background-image: url("Pictures/My_pictures/Rolling.JPG");min-height: 400px;}
+.w3-wide {letter-spacing: 0px;}
+.w3-hover-opacity {cursor: pointer;}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1200px) {.bgimg-1, .bgimg-2, .bgimg-3 {background-attachment: scroll;min-height: 400px;}}
+@media only screen and (max-device-width: 300px) {.mobilemargin {margin-left: -100px;}}
+@media only screen and (max-width: 768px) {*, html, body, .row {margin-left:0 !important; margin-right:0 !important; padding-left:5 !important; padding-right:5 !important; }}
+@media only screen and (max-device-width: 300px) {.gallery {min-width: 300px; min-height: 225px; max-width: 300px; max-height: 225px}}
+/* Create an ellipsis */
+.ellipse {display: -webkit-box; max-width: 2000px; height: 100px; 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis}
 </style>
 
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" 
+	   href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i></a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT ME</a>
+    <a href="#publications" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> MY PUBLICATIONS</a> 
+	<a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a> </div>
+<!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT ME</a>
+    <a href="#publications" class="w3-bar-item w3-button" onclick="toggleFunction()">MY PUBLICATIONS</a>
+	<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a></div> </div>
 
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/quarto.js"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="index_files/libs/quarto-html/anchor.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<!-- First Parallax Image -->
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large" >	  	
+      <img src="Pictures/Profile/Fieldwork.jpeg" class="w3-round w3-image w3-border" alt="JÉRÉMY CARLOT" width="300" height="200"> 
+	  		<p style: align="center" style="line-height:1.4"><font size="6">JÉRÉMY T. CARLOT</font><br>
+		<font size="4">MARINE BENTHIC ECOLOGIST</font></p></div>
+    <div class="w3-col m6" > 
+	<div class="mobilemargin" style="margin-top: -8px">
+	<p style: align="justify"> I am a post-doctoral fellow with the <font color="#282828"><a href="http://www.ba.ieo.es" style="text-decoration:none">Spanish Institute of Oceanography – Balearic Oceanographic Center</a></font> at CSIC in Spain. I am mostly interested in measuring the physiological traits of marine organisms (<em>e.g.,</em> calcification or net photosynthesis for benthic organisms, nutrients uptake for fish) to quantify how the ecosystem functioning is changing in the face of global change. My works involve a combination of fieldwork, <em>in situ</em> and ex-situ experiments, and advanced statistical modeling across local and large spatial scales. 
+	<p style="line-height:1.2">
+	You can download my full resume here: <a href="Papers/CARLOT_CV.pdf"><input type="button" class="favorite styled" value="Download"></a> <br>
+	<font size = "1"> <em>last update: September 2025</em> </font> </p> </p> </div> </div> </div> </div>
 
+<!-- Second Parallax Image -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id = "publications">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">MY PUBLICATIONS</span> </div> </div>
+<div class="w3-row">
+    <div class="w3-col"></div>
+    <div class="w3-col w3-padding-large"> <p style: align="justify"> 
 
-</head>
+<font size="5"> <strong> <u> PEER–REVIEWED PUBLICATIONS </u> </strong> <br> </font>
 
-<body class="fullcontent">
+	<div class="w3-col m2">
+	<p style="float:left"> <img alt = "Paper_18_icn" src="Illustrations/18.png" heigth = "175" width = "175"> </p> </div>
+	<div class="mobilemargin" style="margin-left: 290px">
+	<strong> <font size="4"> Ocean acidification influences strain selection and metabolism of the benthic diatom <em>Cocconeis neothumensis</em> var. <em>marina</em> </font> </strong> – <em>Ecosystems</em> (2025) <br>
+	<font size="2"> Somma, E., Zupo, V., Mutalipassi, M., Ruocco, N., Terlizzi, A., Iamunno, F., <strong>Carlot J.</strong>, & Costantini, M. <br> </font>
+	<span class="ellipse">
+	<p align="justify"> <u>Abstract:</u> The uptake of carbon dioxide (CO<sub>2</sub>) by oceans is dramatically altering the chemistry of seawater, leading to a continuous decrease of pH over the last century. This phenomenon, called ocean acidification (OA), has raised concerns due to its negative effects on marine biodiversity, including plankton communities and seagrass meadows. The most relevant seagrass in the Mediterranean is Posidonia oceanica, producing complex and stable benthic ecosystems. OA markedly affects the colonization and settlement patterns of epibionts within the leaf communities of P. oceanica. Epiphytic diatoms associated with P. oceanica are influenced by complex chemical and trophic interactions and play a fundamental role in the ecological successions characterizing the leaf stratum. In this study, we isolated two strains of Cocconeis neothumensis var. marina, one of the main epiphyte diatoms associated with P. oceanica, from two sites off the Island of Ischia (Italy) characterized by different pH conditions, <em>i.e.,</em> a naturally low pH site (pH 7.6) influenced by volcanic CO<sub>2</sub> emissions, and an adjacent location with ambient pH conditions (pH 8.1). We further cultured both strains of C. neothumensis under both pH conditions, resulting in four treatment conditions. Four significantly different growth curves were obtained, and metabolomic studies confirmed that the physiology of the strains differed according to pH conditions. Overall, this study demonstrated that OA is likely to trigger the selection of specific diatom strains, with possible consequences for trophic and chemical relationships among the associated consumers. </p> </span>
+	<a href="Papers/18.pdf"><input type="button" class="favorite styled" value="PDF"></a>
+	<a href="https://doi.org/10.1007/s10021-025-00995-4"><input type="button" class="favorite styled" value="Journal"></a> <br> <br> </div>	
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+	<div class="w3-col m2">
+	<p style="float:left"> <img alt = "Paper_17_icn" src="Illustrations/17.png" heigth = "175" width = "175"> </p> </div>
+	<div class="mobilemargin" style="margin-left: 290px">
+	<strong> <font size="4"> Vulnerability of benthic trait diversity across the Mediterranean Sea following Mass Mortality Events </font> </strong> – <em>Nature Communications</em> (2025) <br>
+	<font size="2"> <strong>Carlot J.</strong>, Galobart, C., Gomez-Gras, D., Santamaria, J., Golo, R., Sini, M., Cebrian, E., Gerovasileiou, V., Ponti, M., Turicchia, E., Comeau, S., Rilov, G., Tamburello, L., Pulido Mantas, T., Cerrano, C., Ledoux, J-B., Gattuso, J-P., Ramirez-Calero, S., Millán Agudo, L., Montefalcone, M., Katsanevakis, S., Garrabou, J. & Teixidó, N. <br> </font>
+	<span class="ellipse">
+	<p align="justify"> <u>Abstract:</u> Unraveling the functional future of marine ecosystems amid global change poses a pressing challenge. This is particularly critical in the Mediterranean Sea, which is highly impacted by global and local drivers. Utilizing extensive mass mortality events (MMEs) datasets spanning from 1986 to 2020 across the Mediterranean Sea, we investigated the trait vulnerability of benthic species that suffered from MMEs induced by nine distinct mortality drivers. By analyzing changes in ten ecological traits across 389 benthic species—constituting an extensive compendium of Mediterranean ecological traits to date—we identified 228 functional entities (FEs), defined as groups of species sharing the same trait values. Our findings indicate that of these 55 FEs were impacted by MMEs, accentuating a heightened vulnerability within specific trait categories. Notably, more than half of the mortality records showed severe impacts on calcifying and larger species with slower growth which mostly account for tree-like and massive forms. Altogether, we highlight that 29 FEs suffered extreme mortality, leading to a maximum increase of 19.1% of the global trait volume vulnerability over 35 years. We also reveal that 10.8% of the trait volume may have been temporarily lost over the last five years, emphasizing the risk of a rapid ecological transformation in the Mediterranean Sea. </p> </span>
+	<a href="Papers/17.pdf"><input type="button" class="favorite styled" value="PDF"></a>
+	<a href="https://doi.org/10.1038/s41467-025-55949-0 "><input type="button" class="favorite styled" value="Journal"></a>
+	<a href="https://github.com/JayCrlt/MMEs_Mortality"><input type="button" class="favorite styled" value="Code"></a> <br> <br> </div>	
 
-<main class="content" id="quarto-document-content">
+<font size="5"> <strong><u>NON–PEER–REVIEWED PUBLICATIONS</u></strong> <br> </font>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">index</h1>
-</div>
+	<div class="w3-col m2">
+	<p style="float:left"> <img alt = "Paper_00_icn" src="Illustrations/00D.png" heigth = "175" width = "175"> </p> </div>
+	<div class="mobilemargin" style="margin-left: 290px">
+	<strong> <font size="4"> Restoring coastal resilience: The role of macroalgal forests in oxygen production and pH regulation </font> </strong> – <em> Journal of Phycology </em> (2025) <br>
+	<font size="2"><strong>Carlot, J.</strong><br> </font>
+	<span class="ellipse">
+	<p align="justify"> <u>Abstract:</u> Coastal marine ecosystems provide essential services, including carbon sequestration, habitat provision, and primary production. Among these, macroalgal forests play a fundamental role in maintaining ecological balance, particularly in sheltered Mediterranean bays where they coexist with seagrasses to form diverse and productive habitats. However, these ecosystems are increasingly vulnerable to environmental stressors such as pollution, habitat degradation, and climate change. As a result, restoration efforts are gaining traction as a means to counteract habitat degradation, yet assessing their long-term effectiveness remains a challenge. A key question in ecological restoration is whether restored habitats can functionally match healthy ecosystems, particularly in terms of fundamental processes such as oxygen production and pH regulation. Galobart et al. (2025) evaluated the success of a decade-long macroalgal forest restoration by comparing oxygen and pH fluxes in restored, healthy, and degraded habitats. Their results provided empirical evidence of the functional recovery of restored habitats and their potential contributions to coastal ecosystem health.</p> </span>
+	<a href="Papers/00D.pdf"><input type="button" class="favorite styled" value="PDF"></a>
+	<a href="https://onlinelibrary.wiley.com/doi/10.1111/jpy.70019"><input type="button" class="favorite styled" value="Journal"></a> <br> <br> </div>
 
+	</p> </div> </div>
 
+<!-- Second Parallax Image -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id = "Contact">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span> </div> </div>
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact"> <div class="w3-col m6 w3-container"> </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <font size="3"> 
+			<i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Palma de Mallorca, Spain <br> </font>
+        <font size="3"> 
+			<i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +33 659 915 659 or +34 640 627 439 <br> </font>
+        <font size="3"> <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: <font color="#282828"><a href="mailto:jay.crlt02@gmail.com" style="text-decoration:none">jay.crlt02@gmail.com</a> </font> </font> </div> 
 
-<div class="quarto-title-meta">
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>dottmann </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
+  <a href="#about" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+	  <a href="https://bsky.app/profile/jerem-carlot.bsky.social"> <img border="0" alt="Bluesky" src="Icons/bluesky.png" width="30" height="30" class="button"></a>
+	  <a href="https://github.com/JayCrlt"> <img border="0" alt="Github" src="Icons/GitHub.png" width="30" height="30" class="button"></a>
+	  <a href="https://www.researchgate.net/profile/Jeremy_Carlot"> <img border="0" alt="ResearchGate" src="Icons/Researchgate.png" width="30" height="30" class="button"></a>
+	  <a href="https://scholar.google.com/citations?user=Eotjew0AAAAJ&hl=en&oi=sra"> <img border="0" alt="ResearchGate" src="Icons/GoogleScholar.png" width="30" height="30" class="button"></a>
+	  <a href="http://orcid.org/0000-0003-0887-8005"> <img border="0" alt="ORCID" src="Icons/ORCID.png" width="30" height="30" class="button"> </a> 
+	  <p style: align="center" style="line-height:.2"><font size="1" color = "black"><h1>JÉRÉMY CARLOT</h1></font>
+	  <h2><font size="1" color = "black">MARINE BENTHIC ECOLOGIST FELLOW</font></h2></p>
+	</div> </footer>
+	
+<script>
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else { navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");}}
 
-</header>
-
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-</section>
-
-</main>
-<!-- /main column -->
-<script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn) {
-    const config = {
-      allowHTML: true,
-      content: contentFn,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start'
-    };
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
-      });
-    }
-  }
-});
-</script>
-</div> <!-- /content -->
-
-
-
-</body></html>
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {var x = document.getElementById("navDemo"); if (x.className.indexOf("w3-show") == -1) {x.className += " w3-show";
+    } else {x.className = x.className.replace(" w3-show", "");}}
+	
+</script> </body> </html>
+	
