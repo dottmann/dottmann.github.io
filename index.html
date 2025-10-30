@@ -25,19 +25,39 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Avenir Light";}
 body, html {height: 100%; color: #777;line-height: 1.8;}
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;}
-/* Second image (Portfolio) */
+/* First image (Portfolio) */
 .bgimg-2 {background-image: url("Pictures/My_pictures/alvarino.JPG");min-height: 400px;}
-/* Third image (Contact) */
+/* Second image (Contact) */
 .bgimg-3 {background-image: url("Pictures/My_pictures/piscivory_tthinnus.jpg");min-height: 400px;}
 .w3-wide {letter-spacing: 0px;}
 .w3-hover-opacity {cursor: pointer;}
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1200px) {.bgimg-1, .bgimg-2, .bgimg-3 {background-attachment: scroll;min-height: 400px;}}
+@media only screen and (max-device-width: 1200px) {.bgimg-2, .bgimg-3 {background-attachment: scroll;min-height: 400px;}}
 @media only screen and (max-device-width: 300px) {.mobilemargin {margin-left: -100px;}}
 @media only screen and (max-width: 768px) {*, html, body, .row {margin-left:0 !important; margin-right:0 !important; padding-left:5 !important; padding-right:5 !important; }}
 @media only screen and (max-device-width: 300px) {.gallery {min-width: 300px; min-height: 225px; max-width: 300px; max-height: 225px}}
-/* Create an ellipsis */
-.ellipse {display: -webkit-box; max-width: 2000px; height: 120px; 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis}
+/* subsection */
+.section-title {font-size: 25px; color: #000000; font-weight: bold; text-decoration: underline; margin-top: 30px; margin-bottom: 20px}
+/* Abstract collapse */
+.abstract {font-size:14px; margin-top: 5px; text-align: justify; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden}
+.abstract.expanded {-webkit-line-clamp: unset}
+.readmore-link {font-size: 13px; color: #000000; cursor: pointer; text-decoration: underline; display: inline; margin: 0; padding: 0; line-height: 2; vertical-align: top}
+/* Default desktop layout */
+.paper-entry .paper-figure {float: left; margin-right: 12px; width: 150px; height: 150px;}
+.paper-entry > div {margin-left: 162px;}
+/* Mobile layout: image on top, text below */
+@media screen and (max-width: 768px) {
+  .paper-entry .paper-figure {float: none !important; display: block !important; margin: 0 auto 10px auto !important; width: 200px !important; height: auto !important}
+  .paper-entry > div {margin-left: 0 !important}}
+/* Icons row (desktop + mobile) */
+.paper-icons {margin-top: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px; row-gap: 6px; line-height: 1.2}
+.paper-icons a {display: flex; align-items: center; text-decoration: none; color: black}
+.paper-icons img {width: 20px; height: 20px; margin-right: 4px}
+/* On small screens, shrink the gap even more */
+@media screen and (max-width: 400px) {.paper-icons {gap: 12px; row-gap: 4px}}
+/* Justify the citation format */
+.pub-info {font-size: 16px; text-align: justify}
+@media screen and (max-width: 768px) {.pub-info {text-align: justify}}
 </style>
 
 <body>
@@ -75,40 +95,46 @@ body, html {height: 100%; color: #777;line-height: 1.8;}
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">MY PUBLICATIONS</span> </div> </div>
 <div class="w3-row">
-    <div class="w3-col"></div>
     <div class="w3-col w3-padding-large"> <p style: align="justify"> 
 
 <font size="5"> <strong> <u> PEER–REVIEWED PUBLICATIONS </u> </strong> <br> </font>
 
-	<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr013" src="Illustrations/pr013.jpg" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" src="Illustrations/pr013.jpg" alt="pr013">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> FEISTY Fortran library and R package to integrate fish and fisheries with biogeochemical models </font> </strong> – <em>Methods in Ecology and Evolution</em> (2025) <br>
 	<font size="2"> Zhao Y, van Denderen D, Denéchère, R Falciani J, <strong>Ottmann D</strong>, Petrik C, Stock C, Andersen K <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> The FishErIes Size and functional TYpe model (FEISTY) is a mechanistic ecosystem model that fully integrates ecosystem structure across trophic levels through functional types. We present an R package that enables users to run simulations ranging from a 0D chemostat to full global scales. The library is written in Fortran90 with an R interface and provides a web application for visual exploration. We present and compare results from four core configurations across a range of depths, productivity and fishing levels, and we assess the convergence of solutions as the number of size classes is increased. The model has historically been coupled to biogeochemical models of mesozooplankton and detritus production, but it can also be applied in a stand-alone version. We demonstrate the library to set up and simulate fish communities under varying productivity of mesozooplankton and benthos, and top-down forcing from fishing. We outline three strategies for coupling FEISTY with biogeochemical model output and discuss future directions and open issues. </p> </span>
+  <div id="abs013" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u>  The FishErIes Size and functional TYpe model (FEISTY) is a mechanistic ecosystem model that fully integrates ecosystem structure across trophic levels through functional types. We present an R package that enables users to run simulations ranging from a 0D chemostat to full global scales. The library is written in Fortran90 with an R interface and provides a web application for visual exploration. We present and compare results from four core configurations across a range of depths, productivity and fishing levels, and we assess the convergence of solutions as the number of size classes is increased. The model has historically been coupled to biogeochemical models of mesozooplankton and detritus production, but it can also be applied in a stand-alone version. We demonstrate the library to set up and simulate fish communities under varying productivity of mesozooplankton and benthos, and top-down forcing from fishing. We outline three strategies for coupling FEISTY with biogeochemical model output and discuss future directions and open issues.</div>
+  <span class="readmore-link" onclick="toggleAbstract('abs013', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr013.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1111/2041-210X.14465"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>	
-	
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr012" src="Illustrations/pr012.jpg" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+	<a href="https://github.com/Kenhasteandersen/FEISTY_model_paper"><input type="button" class="favorite styled" value="Code"></a>
+  </div> </div> </div></div>
+
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr012" src="Illustrations/pr012.jpg">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Impact of increased fishing on long-term sequestration of carbon by cephalopods </font> </strong> – <em>Current Biology</em> (2024) <br>
-	<font size="2"> <strong>Ottmann D</strong>, van Denderen D, Visser A, Andersen KH <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Fish and other metazoans play a major role in long-term sequestration of carbon in the oceans through the biological carbon pump. Recent studies estimate that fish can release about 1,200 to 1,500 million metric tons of carbon per year (MtC year<sup>-1</sup>) in the oceans through feces production, respiration, and deadfalls, with mesopelagic fish playing a major role. This carbon remains sequestered (stored) in the ocean for a period that largely depends on the depth at which it is released. Cephalopods (squid, octopus, and cuttlefish) have the potential to sequester carbon more effectively than fish because they grow on average five times faster than fish and they die after reproducing at an early age (usually 1–2 years), after which their carcasses sink rapidly to the sea floor. Deadfall of carcasses is particularly important for long-term sequestration because it rapidly transports carbon to depths where residence times are longest. We estimate that cephalopod carcasses transfer 11–22 MtC to the seafloor globally. While cephalopods represent less than 5% of global fisheries catch, fishing extirpates about 0.36 MtC year<sup>-1</sup> of cephalopod carbon that could otherwise have sunk to the seafloor, about half as much as that of fishing large fish. </p> </span>
+	<font size="2">  <strong>Ottmann D</strong>, van Denderen D, Visser A, Andersen KH <br> </font>
+  <div id="abs012" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u>  Fish and other metazoans play a major role in long-term sequestration of carbon in the oceans through the biological carbon pump. Recent studies estimate that fish can release about 1,200 to 1,500 million metric tons of carbon per year (MtC year<sup>-1</sup>) in the oceans through feces production, respiration, and deadfalls, with mesopelagic fish playing a major role. This carbon remains sequestered (stored) in the ocean for a period that largely depends on the depth at which it is released. Cephalopods (squid, octopus, and cuttlefish) have the potential to sequester carbon more effectively than fish because they grow on average five times faster than fish and they die after reproducing at an early age (usually 1–2 years), after which their carcasses sink rapidly to the sea floor. Deadfall of carcasses is particularly important for long-term sequestration because it rapidly transports carbon to depths where residence times are longest. We estimate that cephalopod carcasses transfer 11–22 MtC to the seafloor globally. While cephalopods represent less than 5% of global fisheries catch, fishing extirpates about 0.36 MtC year<sup>-1</sup> of cephalopod carbon that could otherwise have sunk to the seafloor, about half as much as that of fishing large fish.</div>
+  <span class="readmore-link" onclick="toggleAbstract('abs012', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr012.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1016/j.cub.2024.04.023"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
-	
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr011" src="Illustrations/pr011.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+	<a href="https://github.com/dottmann/cephalopod_carbon"><input type="button" class="favorite styled" value="Code"></a>
+  </div> </div> </div></div>
+
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr011" src="Illustrations/pr011.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Biomass and trait biogeography of cephalopods on the European and North American continental shelves </font> </strong> – <em>Global Ecology and Biogeography</em> (2024) <br>
-	<font size="2"> <strong>Ottmann D</strong>, Andersen KH, van Denderen D <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Aim:
+	<font size="2">  <strong>Ottmann D</strong>, Andersen KH, van Denderen D <br> </font>
+  <div id="abs011" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u>  Aim:
 We evaluate whether the biomass and trait biogeography of cephalopods follow the distribution expected by metabolic theory for ectotherms with rapid growth and high metabolic rate.
 Location:
 Continental shelves of the North Atlantic and Northeast Pacific oceans; global marine ecoregions.
@@ -121,179 +147,216 @@ We map the biomass of cephalopods and their traits across marine shelves using s
 Resulta:
 Cephalopods represent a small fraction (1%) of the combined fish and cephalopod biomass on continental shelves. However, their distribution displays a high regional heterogeneity, with some areas being virtually absent of cephalopods and other areas accounting for up to 24% of total biomass. Higher temperatures and zooplankton productivity are associated with increased cephalopod biomass and proportional biomass relative to fish. The largest cephalopods are found in the Northeast Pacific. Growth rates are highest in warmer waters with fastest growth rates found in lower latitudes of the North Atlantic. Cephalopods constitute 5% of the combined fish and cephalopod global fisheries catch. This proportion varies across regions. Higher temperature and zooplankton productivity are associated with increased cephalopod catch relative to fish.
 Main Conclusions:
-Temperature and productivity shape the large-scale biogeography of cephalopods and their traits on marine shelves. The relations with temperature suggest that future warming could lead to a proliferation of fast-growing cephalopods in cold and temperate systems, with implications for ecosystem dynamics and fisheries. Despite a relatively low observed biomass, cephalopods hold substantial potential to change ecosystem structure and functioning given their high energy lifestyle. </p> </span>
+Temperature and productivity shape the large-scale biogeography of cephalopods and their traits on marine shelves. The relations with temperature suggest that future warming could lead to a proliferation of fast-growing cephalopods in cold and temperate systems, with implications for ecosystem dynamics and fisheries. Despite a relatively low observed biomass, cephalopods hold substantial potential to change ecosystem structure and functioning given their high energy lifestyle. </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs011', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr011.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1111/geb.13803"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
-	
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr010" src="Illustrations/pr010.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+	<a href="https://github.com/dottmann/cephalopod_spatial_patterns"><input type="button" class="favorite styled" value="Code"></a>
+  </div> </div> </div></div>
+
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr010" src="Illustrations/pr010.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Model of mesopelagic fish predation on eggs and larvae shows benefits of tuna spawning under full moon </font> </strong> – <em>Limnology and Oceanography</em> (2023) <br>
-	<font size="2"> <strong>Ottmann D</strong>, Langbehn TJ, Reglero P, Alvarez-Berastegui D, Fiksen Ø <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Most mesopelagic fish are small planktivores that migrate up at nightfall to feed in the safety of darkness and descend to depth at dawn to escape visual predators. However, the trophic roles can reverse since mesopelagic fishes also predate eggs and larvae of their predators. We use the Atlantic bluefin tuna as a model species to test the hypothesis that fishes in the open ocean synchronize spawning to moon-lit nights (when mesopelagic fishes avoid near-surface waters) to increase offspring fitness. Our analysis over two decades of field observations shows that tuna spawn most intensively the week before full moon. This fits predictions from a mechanistic model where spawning around full moon increases offspring fitness by two orders of magnitude due to low predation from mesopelagic fishes. Circalunar patterns of food availability can also favor fitness of offspring spawned the days before full moon. Our findings suggest that mesopelagic fishes may have an important impact on pelagic fish through predation of early life stages and cause an evolutionary drive to synchronize spawning to the lunar cycle. </p> </span>
+	<font size="2">  <strong>Ottmann D</strong>, Langbehn TJ, Reglero P, Alvarez-Berastegui D, Fiksen Ø <br> </font>
+  <div id="abs010" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u> Most mesopelagic fish are small planktivores that migrate up at nightfall to feed in the safety of darkness and descend to depth at dawn to escape visual predators. However, the trophic roles can reverse since mesopelagic fishes also predate eggs and larvae of their predators. We use the Atlantic bluefin tuna as a model species to test the hypothesis that fishes in the open ocean synchronize spawning to moon-lit nights (when mesopelagic fishes avoid near-surface waters) to increase offspring fitness. Our analysis over two decades of field observations shows that tuna spawn most intensively the week before full moon. This fits predictions from a mechanistic model where spawning around full moon increases offspring fitness by two orders of magnitude due to low predation from mesopelagic fishes. Circalunar patterns of food availability can also favor fitness of offspring spawned the days before full moon. Our findings suggest that mesopelagic fishes may have an important impact on pelagic fish through predation of early life stages and cause an evolutionary drive to synchronize spawning to the lunar cycle.  </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs010', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr010.pdf"><input type="button" class="favorite styled" value="PDF"></a>
-	<a href="https://doi.org/10.1002/lno.12465"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
-	
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr009" src="Illustrations/pr009.jpg" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+	<a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lno.12465"><input type="button" class="favorite styled" value="Journal"></a>
+	<a href="https://github.com/dottmann/moon_light"><input type="button" class="favorite styled" value="Code"></a>
+  </div> </div> </div></div>
+
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr009" src="Illustrations/pr009.jpg" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Seasonal variability of phytoplankton community response to thermal discharge from nuclear power plant in temperate coastal area </font> </strong> – <em>Environmental Pollution</em> (2023) <br>
-	<font size="2"> Zhang J, Wang Y, <strong>Ottmann D</strong>, Cao P, Yang J, Yu, J, Lv, Z <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Nuclear power plants (NPPs) developed rapidly worldwide in the last half-century and have become one of the most important electric power sources. Thermal discharge from NPPs increases the temperature of receiving waters, directly and indirectly affecting phytoplankton community. Seasonal and interannual variation in environmental factors in temperate areas makes it challenging to determine the effects of thermal effluents from NPPs on coastal phytoplankton. Here, a five-year study was performed around a NPP in the western Yellow Sea to determine how thermal effluents affect phytoplankton community during different seasons. A total of 106 phytoplankton species from 7 phyla were identified in 10 biological sites during the 19 cruises, among which diatoms dominated phytoplankton abundance in all seasons. Our results show that increased seawater temperature caused by thermal effluents (1) was not enough to cause a statistically significant effect on phytoplankton abundance composition from autumn through spring, (2) significantly stimulated phytoplankton population growth and changed phytoplankton composition in summer (3) increased the proportion of diatoms and decreased the proportion of dinoflagellate in summer, and (4) increased the abundance and dominance of Skeletonema costatum sensu lato, especially in summer. The findings of this study provide essential information on the ecological impact of thermal effluents from NPPs in temperate coastal areas. </p> </span>
+	<font size="2">  Zhang J, Wang Y, <strong>Ottmann D</strong>, Cao P, Yang J, Yu, J, Lv, Z <br> </font>
+  <div id="abs009" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u> Nuclear power plants (NPPs) developed rapidly worldwide in the last half-century and have become one of the most important electric power sources. Thermal discharge from NPPs increases the temperature of receiving waters, directly and indirectly affecting phytoplankton community. Seasonal and interannual variation in environmental factors in temperate areas makes it challenging to determine the effects of thermal effluents from NPPs on coastal phytoplankton. Here, a five-year study was performed around a NPP in the western Yellow Sea to determine how thermal effluents affect phytoplankton community during different seasons. A total of 106 phytoplankton species from 7 phyla were identified in 10 biological sites during the 19 cruises, among which diatoms dominated phytoplankton abundance in all seasons. Our results show that increased seawater temperature caused by thermal effluents (1) was not enough to cause a statistically significant effect on phytoplankton abundance composition from autumn through spring, (2) significantly stimulated phytoplankton population growth and changed phytoplankton composition in summer (3) increased the proportion of diatoms and decreased the proportion of dinoflagellate in summer, and (4) increased the abundance and dominance of Skeletonema costatum sensu lato, especially in summer. The findings of this study provide essential information on the ecological impact of thermal effluents from NPPs in temperate coastal areas.  </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs009', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr009.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1016/j.envpol.2022.120898"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
-	
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr008" src="Illustrations/pr008.jpeg" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
-	<strong> <font size="4"> Counting stars: contribution of early career scientists to marine and fisheries sciences </font> </strong> – <em>ICES Journal of Marine Sciences</em> (2022) <br>
+  </div> </div> </div></div>
+  
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr008" src="Illustrations/pr008.jpeg" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
+	<strong> <font size="4">  Counting stars: contribution of early career scientists to marine and fisheries sciences </font> </strong> – <em>ICES Journal of Marine Sciences</em> (2022) <br>
 	<font size="2"> Smoliński S, <strong>Ottmann D</strong>, Outinen O, Schadeberg A, Melli V, Funk L, Denechaud C, Wieczorek A, Orio A, Mussgnug R, Morkune R, Vereide EH, Zdulska M, Phillips G, Lischenko F, Srėbalienė G <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Scientific careers and publishing have radically changed in recent decades creating an increasingly competitive environment for early career scientists (ECS). The lack of quantitative data available on ECS in marine and fisheries sciences prevents direct assessment of the consequences of increased competitiveness. We assessed the contributions of ECS (up to 6 years post first publication) to the field using an indirect approach by investigating the authorships of peer-reviewed articles. We analysed 118461 papers published by 184561 authors in the top 20 marine and fisheries sciences journals over the years 1991–2020. We identified a positive long-term trend in the proportion of scientific articles (co-)authored by ECS. This suggests a growing contribution by ECS to publications in the field. However, the mean proportion of ECS (co-)authors within one publication declined significantly over the study period. Subsequent tests demonstrated that articles with ECS (co-)authors receive fewer citations and that the proportion of ECS (co-)authors on an article has a significant negative effect on the number of citations. We discuss the potential causes of these inequalities and urge systematic support to ECS to achieve more balanced opportunities for funding and publishing between ECS and senior scientists. </p> </span>
+  <div id="abs008" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u> Scientific careers and publishing have radically changed in recent decades creating an increasingly competitive environment for early career scientists (ECS). The lack of quantitative data available on ECS in marine and fisheries sciences prevents direct assessment of the consequences of increased competitiveness. We assessed the contributions of ECS (up to 6 years post first publication) to the field using an indirect approach by investigating the authorships of peer-reviewed articles. We analysed 118461 papers published by 184561 authors in the top 20 marine and fisheries sciences journals over the years 1991–2020. We identified a positive long-term trend in the proportion of scientific articles (co-)authored by ECS. This suggests a growing contribution by ECS to publications in the field. However, the mean proportion of ECS (co-)authors within one publication declined significantly over the study period. Subsequent tests demonstrated that articles with ECS (co-)authors receive fewer citations and that the proportion of ECS (co-)authors on an article has a significant negative effect on the number of citations. We discuss the potential causes of these inequalities and urge systematic support to ECS to achieve more balanced opportunities for funding and publishing between ECS and senior scientists. </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs008', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr008.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1093/icesjms/fsac187"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
-	
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr007" src="Illustrations/pr007.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
-	<strong> <font size="4"> Small fish eat smaller fish: a model of interaction strength in early life stages of two tuna species </font> </strong> – <em>Limnology and Oceanography Letters</em> (2022) <br>
+  </div> </div> </div></div>
+
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr007" src="Illustrations/pr007.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
+	<strong> <font size="4"> Small fish eat smaller fish: a model of interaction strength in early life stages of two tuna species </font> </strong> – <em>Limnology and Oceanography Letters</em> (2022)  <br>
 	<font size="2"> <strong>Ottmann D</strong>, Reglero P, Alemany F, Álvarez-Berastegui D, Martín M, Fiksen Ø <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Fish larvae are rarely a major driver of fish mortality, but tunas can produce large batches of larvae that rapidly develop the capacity to kill other fish. We combine a model for the killing potential from Atlantic bluefin tuna (BFT) larvae on larval albacore (ALB) with field observations at a major spawning ground. Both species spawn from June to August, but BFT has a narrow spawning peak at the beginning of the season that results in priority effects. Our model shows that, following a recent stock recovery, BFT larvae have increased their killing pressure, leaving areas of up to 1000 km<sup>2</sup> with < 1% chance of ALB daily survival. Such increase in killing pressure suggests larval ALB has reduced chances to survive; yet in large areas with few BFT, other drivers of early survival prevail over BFT predation. This shows that strong predatory interactions can occur during larval stages in some fishes. </p> </span>
+  <div id="abs007" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u>   Fish larvae are rarely a major driver of fish mortality, but tunas can produce large batches of larvae that rapidly develop the capacity to kill other fish. We combine a model for the killing potential from Atlantic bluefin tuna (BFT) larvae on larval albacore (ALB) with field observations at a major spawning ground. Both species spawn from June to August, but BFT has a narrow spawning peak at the beginning of the season that results in priority effects. Our model shows that, following a recent stock recovery, BFT larvae have increased their killing pressure, leaving areas of up to 1000 km<sup>2</sup> with < 1% chance of ALB daily survival. Such increase in killing pressure suggests larval ALB has reduced chances to survive; yet in large areas with few BFT, other drivers of early survival prevail over BFT predation. This shows that strong predatory interactions can occur during larval stages in some fishes. </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs007', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr007.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1002/lol2.10241"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
-			
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr006" src="Illustrations/pr006.jpg" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+	<a href="https://github.com/dottmann/bluefin_tuna_albacore_piscivory"><input type="button" class="favorite styled" value="Code"></a>
+  </div> </div> </div></div>
+	
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr006" src="Illustrations/pr006.jpg" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Spawning site distribution of a bluefin tuna reduces jellyfish predation on early life stages </font> </strong> – <em>Limnology and Oceanography</em> (2021) <br>
-	<font size="2"> <strong>Ottmann D</strong>, Fiksen Ø, Martín M, Alemany F, Prieto L, Álvarez-Berastegui D, Reglero P <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Recruitment success of marine fishes is generally considered to be highly dependent on larval growth and survival. In temperate ecosystems, fish larvae are sensitive to food limitation during the low productivity seasons, particularly if water temperatures and concomitant larval metabolic costs increase due to climate change. We combined 7 years of in situ sampling of larval fish, novel observations on zooplankton via automated image analyses, and larval physiological modeling to explore feeding conditions of Atlantic herring larvae (Clupea harengus) in the North Sea. The observed plankton size-structure was close to the theoretical optimum for larval foraging, but not the biomass. Our results for autumn larvae supported Hjort's critical period hypothesis: small first-feeding larvae were predicted to have a high probability of starvation, whereas larvae > 13 mm were able to reach their maximal growth capacity. In winter, the majority of herring larvae of all tested sizes (5–27 cm) experienced food-limitation with over 35% probability of starvation. Sensitivity analysis suggested that young herring larvae improve their growth performance and probability of survival if feed not only on copepods and their life-stages but include other microplankters in their diet. Given projected warming of the North Sea, our model predicts that herring larvae would require 28% (35%) more prey biomass in autumn (winter) to sustain their growth and survival in the future. This finding together with the ongoing low recruitment of North Sea herring underscore the importance of future micro- and mesoplankton monitoring within a scope of wintertime larval fish surveys. </p> </span>
+	<font size="2">  <strong>Ottmann D</strong>, Fiksen Ø, Martín M, Alemany F, Prieto L, Álvarez-Berastegui D, Reglero P <br> </font>
+  <div id="abs006" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u>  Recruitment success of marine fishes is generally considered to be highly dependent on larval growth and survival. In temperate ecosystems, fish larvae are sensitive to food limitation during the low productivity seasons, particularly if water temperatures and concomitant larval metabolic costs increase due to climate change. We combined 7 years of in situ sampling of larval fish, novel observations on zooplankton via automated image analyses, and larval physiological modeling to explore feeding conditions of Atlantic herring larvae (Clupea harengus) in the North Sea. The observed plankton size-structure was close to the theoretical optimum for larval foraging, but not the biomass. Our results for autumn larvae supported Hjort's critical period hypothesis: small first-feeding larvae were predicted to have a high probability of starvation, whereas larvae > 13 mm were able to reach their maximal growth capacity. In winter, the majority of herring larvae of all tested sizes (5–27 cm) experienced food-limitation with over 35% probability of starvation. Sensitivity analysis suggested that young herring larvae improve their growth performance and probability of survival if feed not only on copepods and their life-stages but include other microplankters in their diet. Given projected warming of the North Sea, our model predicts that herring larvae would require 28% (35%) more prey biomass in autumn (winter) to sustain their growth and survival in the future. This finding together with the ongoing low recruitment of North Sea herring underscore the importance of future micro- and mesoplankton monitoring within a scope of wintertime larval fish surveys. </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs006', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr006.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1002/lno.11908"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
-	
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr005" src="Illustrations/pr005.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
-	<strong> <font size="4"> Ephyrae and metaephyrae of Pelagia noctiluca: stage determination, morphometry, and shrinkage </font> </strong> – <em>Journal of Plankton Ressearch</em> (2021) <br>
-	<font size="2"> <strong>Ottmann D</strong>, Leyva L, Reglero P, Prieto L, Álvarez I <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u>Understanding processes occurring in the different life stages of jellyfish is key to advance knowledge on their trophic interactions and population dynamics. We describe four developmental stages of Pelagia noctiluca ephyrae and metaephyrae based on the progress of feeding structures and morphometric measurements on the central disc diameter and total body diameter. Size differs significantly among stages, but it can overlap substantially, suggesting that it is not always coupled with development progress due to different somatic growth. Morphological distinction of stages is biologically important because it implies different levels of food specialization and capture efficiency. We further report a 25% (±13 SD) shrinkage of ephyrae and metaephyrae after storage in 4% formaldehyde solution. This metric can be used in ecological studies focusing on size-related traits of field observed individuals. </p> </span>
+	<a href="https://github.com/dottmann/tuna_jellyfish_predation"><input type="button" class="favorite styled" value="Code"></a>
+  </div> </div> </div></div>
+
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr005" src="Illustrations/pr005.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
+	<strong> <font size="4">  Ephyrae and metaephyrae of Pelagia noctiluca: stage determination, morphometry, and shrinkage </font> </strong> – <em>Journal of Plankton Ressearch</em> (2021) <br>
+	<font size="2">  <strong>Ottmann D</strong>, Leyva L, Reglero P, Prieto L, Álvarez I <br> </font>
+  <div id="abs005" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u>  Understanding processes occurring in the different life stages of jellyfish is key to advance knowledge on their trophic interactions and population dynamics. We describe four developmental stages of Pelagia noctiluca ephyrae and metaephyrae based on the progress of feeding structures and morphometric measurements on the central disc diameter and total body diameter. Size differs significantly among stages, but it can overlap substantially, suggesting that it is not always coupled with development progress due to different somatic growth. Morphological distinction of stages is biologically important because it implies different levels of food specialization and capture efficiency. We further report a 25% (±13 SD) shrinkage of ephyrae and metaephyrae after storage in 4% formaldehyde solution. This metric can be used in ecological studies focusing on size-related traits of field observed individuals. </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs005', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr005.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1093/plankt/fbab060"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
+	<a href=" https://github.com/dottmann/pelagia_ephyrae_stage_determination"><input type="button" class="favorite styled" value="Code"></a>
+  </div> </div> </div></div>
 
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr004" src="Illustrations/pr004.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr004" src="Illustrations/pr004.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Abundance of Pelagia noctiluca early life stages in the western Mediterranean Sea scales with surface chlorophyll </font> </strong> – <em>Marine Ecology Progress Series</em> (2021) <br>
-	<font size="2"> <strong>Ottmann D</strong>, Álvarez-Berastegui D, Prieto L, Balbín R, Alemany F, Fiksen Ø, Gordoa A, Reglero P <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Pelagia noctiluca is the most successful and well-studied jellyfish in the Mediterranean Sea. This species tolerates a wide range of water temperatures and succeeds in low to medium food regimes, but factors driving its distribution and population dynamics remain poorly understood. Here we applied a multiscale analytical approach using survey data and a physical-biochemical coupled model to assess how environmental factors affect the 3-dimensional distribution and seasonal abundance of P. noctiluca early life stages. The surveys took place after the spring bloom, when warm water favors fecundity and growth, but food shortage limits the reproductive investment and early survival. We found that most early life stages of P. noctiluca remained above the shallow thermocline and upper mixed layer where temperature is warm. Their spatial distribution was positively correlated with surface chlorophyll concentration, and over 90% of the variation in interannual abundance was explained by basin-scale productivity in June. Warmer water during winter and spring seasons coupled with protracted spring blooms increase the population of P. noctiluca, and this explains the trend of increasing outbreaks observed in the western Mediterranean Sea over the past decades. </p> </span>
+	<font size="2">  <strong>Ottmann D</strong>, Álvarez-Berastegui D, Prieto L, Balbín R, Alemany F, Fiksen Ø, Gordoa A, Reglero P <br> </font>
+  <div id="abs004" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u>  Pelagia noctiluca is the most successful and well-studied jellyfish in the Mediterranean Sea. This species tolerates a wide range of water temperatures and succeeds in low to medium food regimes, but factors driving its distribution and population dynamics remain poorly understood. Here we applied a multiscale analytical approach using survey data and a physical-biochemical coupled model to assess how environmental factors affect the 3-dimensional distribution and seasonal abundance of P. noctiluca early life stages. The surveys took place after the spring bloom, when warm water favors fecundity and growth, but food shortage limits the reproductive investment and early survival. We found that most early life stages of P. noctiluca remained above the shallow thermocline and upper mixed layer where temperature is warm. Their spatial distribution was positively correlated with surface chlorophyll concentration, and over 90% of the variation in interannual abundance was explained by basin-scale productivity in June. Warmer water during winter and spring seasons coupled with protracted spring blooms increase the population of P. noctiluca, and this explains the trend of increasing outbreaks observed in the western Mediterranean Sea over the past decades. </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs004', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr004.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.3354/meps13423"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
-		
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr003" src="Illustrations/pr003.jpg" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+  </div> </div> </div></div>
+	
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr003" src="Illustrations/pr003.jpg" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Age and growth of recently settled splitnose and redbanded rockfishes in the northern California Current </font> </strong> – <em>Joournal of Sea Ressearch</em> (2019) <br>
-	<font size="2"> <strong>Ottmann D</strong>, Grorud-Colvert K, Sponaugle S <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Growth is key to the survival of fishes during their early life and ultimately affects annual recruitment to adult populations. To evaluate early life history traits of two commercially harvested fishes, splitnose (Sebastes diploproa) and redbanded (S. babcocki) rockfishes, we examined the otolith microstructure of juveniles of both species that settled simultaneously in an unusually large settlement pulse. Although overall growth during the dispersal phase was similar for both species, splitnose rockfish were ~2 wks younger and smaller in length at time of sampling, encompassed a narrower age range, and had higher prevalence and earlier occurrence of accessory primordia in their otoliths. Despite almost identical morphological traits of juveniles, our results suggest different pelagic strategies. The otoliths of splitnose rockfish grew faster during a 30-d period, reflecting either faster somatic growth during this period or a different rate of otolith deposition. </p> </span>
+	<font size="2">  <strong>Ottmann D</strong>, Grorud-Colvert K, Sponaugle S <br> </font>
+  <div id="abs003" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u>   Growth is key to the survival of fishes during their early life and ultimately affects annual recruitment to adult populations. To evaluate early life history traits of two commercially harvested fishes, splitnose (Sebastes diploproa) and redbanded (S. babcocki) rockfishes, we examined the otolith microstructure of juveniles of both species that settled simultaneously in an unusually large settlement pulse. Although overall growth during the dispersal phase was similar for both species, splitnose rockfish were ~2 wks younger and smaller in length at time of sampling, encompassed a narrower age range, and had higher prevalence and earlier occurrence of accessory primordia in their otoliths. Despite almost identical morphological traits of juveniles, our results suggest different pelagic strategies. The otoliths of splitnose rockfish grew faster during a 30-d period, reflecting either faster somatic growth during this period or a different rate of otolith deposition. </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs003', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr003.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1016/j.seares.2019.03.002"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
-	
-			<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr002" src="Illustrations/pr002.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+  </div> </div> </div></div>
+			
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr002" src="Illustrations/pr002.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Interannual and regional variability in settlement of groundfishes in Oregon’s protected and fished nearshore waters </font> </strong> – <em>Marine Ecology Progress Series</em> (2018) <br>
-	<font size="2"> <strong>Ottmann D</strong>, Grorud-Colvert K, Sard NM, Huntington BE, Sponaugle S <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> For most benthic marine organisms, settlement of pelagic offspring to bottom-associated habitats is a necessary step in the replenishment of adult populations. Quantifying spatial and temporal variation in settlement is therefore important to fully understand population dynamics, inform fisheries management targets, and design effective spatial management strategies. Data on nearshore patterns of fish settlement are lacking for the northern California Current System (CCS), which is characterized by complex oceanographic currents and a seasonal, intermittent upwelling regime. Thus, to quantify spatial and temporal patterns of fish settlement in the northern CCS in relation to oceanographic conditions, we measured settlement of 5 fish taxa to 2 regions of the Oregon coast over 5 settlement seasons (late spring to early fall, 2012-2016). Temporal patterns of settlement reflected taxon-specific degrees of episodic settlement, with cabezon Scorpaenichthys marmoratus exhibiting the most uniform settlement across each season, and splitnose Sebastes diploproa and redbanded S. babcocki rockfishes exhibiting the most episodic settlement. Fish settlement tended to be greater during short periods of downwelling (upwelling relaxation events) for all but the largest fish taxa. Within settlement season, variation in size-at-settlement tracked taxon-specific temporal patterns of arrival but was unrelated to water temperature. Differences in fish settlement between small marine reserves and nearby unprotected areas was region- and taxon-specific, highlighting the fact that size and habitat heterogeneity should be considered in the design of marine reserves. These findings provide a deeper understanding of settlement patterns across the mosaic of environmental variability in eastern boundary currents such as the CCS. </p> </span>
+	<font size="2">  <strong>Ottmann D</strong>, Grorud-Colvert K, Sard NM, Huntington BE, Sponaugle S <br> </font>
+  <div id="abs002" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u>   For most benthic marine organisms, settlement of pelagic offspring to bottom-associated habitats is a necessary step in the replenishment of adult populations. Quantifying spatial and temporal variation in settlement is therefore important to fully understand population dynamics, inform fisheries management targets, and design effective spatial management strategies. Data on nearshore patterns of fish settlement are lacking for the northern California Current System (CCS), which is characterized by complex oceanographic currents and a seasonal, intermittent upwelling regime. Thus, to quantify spatial and temporal patterns of fish settlement in the northern CCS in relation to oceanographic conditions, we measured settlement of 5 fish taxa to 2 regions of the Oregon coast over 5 settlement seasons (late spring to early fall, 2012-2016). Temporal patterns of settlement reflected taxon-specific degrees of episodic settlement, with cabezon Scorpaenichthys marmoratus exhibiting the most uniform settlement across each season, and splitnose Sebastes diploproa and redbanded S. babcocki rockfishes exhibiting the most episodic settlement. Fish settlement tended to be greater during short periods of downwelling (upwelling relaxation events) for all but the largest fish taxa. Within settlement season, variation in size-at-settlement tracked taxon-specific temporal patterns of arrival but was unrelated to water temperature. Differences in fish settlement between small marine reserves and nearby unprotected areas was region- and taxon-specific, highlighting the fact that size and habitat heterogeneity should be considered in the design of marine reserves. These findings provide a deeper understanding of settlement patterns across the mosaic of environmental variability in eastern boundary currents such as the CCS. </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs002', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr002.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.3354/meps12616"><input type="button" class="favorite styled" value="Journal"></a>
-	<br> <br> </div>
+  </div> </div> </div></div>
 	
-			<div class="w3-col m2">
-	<p style="float:left"> <img alt = "pr001" src="Illustrations/pr001.jpeg" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
-	<strong> <font size="4"> Long-term aggregation of larval fish siblings during dispersal along an open coast </font> </strong> – <em>Proceedings of the National Academy of Sciences of the Unite States of America</em> (2016) <br>
-	<font size="2"> <strong>Ottmann D</strong>, Grorud-Colvert K, Huntington BE, Banks MA, Sponaugle S <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> Pelagic dispersal of most benthic marine organisms is a fundamental driver of population distribution and persistence and is thought to lead to highly mixed populations. However, the mechanisms driving dispersal pathways of larvae along open coastlines are largely unknown. To examine the degree to which early stages can remain spatially coherent during dispersal, we measured genetic relatedness within a large pulse of newly recruited splitnose rockfish (Sebastes diploproa), a live-bearing fish whose offspring settle along the US Pacific Northwest coast after spending up to a year in the pelagic environment. A total of 11.6% of the recruits in a single recruitment pulse were siblings, providing the first evidence for persistent aggregation throughout a long dispersal period. Such protracted aggregation has profound implications for our understanding of larval dispersal, population connectivity, and gene flow within demersal marine populations. </p> </span>
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "pr001" src="Illustrations/pr001.jpeg" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
+	<strong> <font size="4"> Long-term aggregation of larval fish siblings during dispersal along an open coast </font> </strong> – <em>Proceedings of the National Academy of Sciences of the Unite States of America</em> (2016)  <br>
+	<font size="2"> <strong>Ottmann D</strong>, Grorud-Colvert K, Huntington BE, Banks MA, Sponaugle S  <br> </font>
+  <div id="abs001" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u> Pelagic dispersal of most benthic marine organisms is a fundamental driver of population distribution and persistence and is thought to lead to highly mixed populations. However, the mechanisms driving dispersal pathways of larvae along open coastlines are largely unknown. To examine the degree to which early stages can remain spatially coherent during dispersal, we measured genetic relatedness within a large pulse of newly recruited splitnose rockfish (<em>Sebastes diploproa</em>), a live-bearing fish whose offspring settle along the US Pacific Northwest coast after spending up to a year in the pelagic environment. A total of 11.6% of the recruits in a single recruitment pulse were siblings, providing the first evidence for persistent aggregation throughout a long dispersal period. Such protracted aggregation has profound implications for our understanding of larval dispersal, population connectivity, and gene flow within demersal marine populations. </div>
+  <span class="readmore-link" onclick="toggleAbstract('abs001', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/pr001.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.1073/pnas.1613440113"><input type="button" class="favorite styled" value="Journal"></a>
-		<a href="https://doi.org/10.1073/pnas.1720656115"><input type="button" class="favorite styled" value="Retraction"></a>
-	<br> <br> </div>
+  </div> </div> </div></div>
+
 
 <font size="5"> <strong><u>NON–PEER–REVIEWED PUBLICATIONS</u></strong> <br> </font>
 
-	<div class="w3-col m2">
-	<p style="float:left"> <img alt = "npr005" src="Illustrations/npr005.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "npr005" src="Illustrations/npr005.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Workshop on Assessing the Impact of Fishing on Oceanic Carbon (WKFISHCARBON) </font> </strong> – <em> ICES Scientific Reports </em> (2024) <br>
-	<font size="2">Bastardie F, Belin A, Bentley J, Berzaghi , Bore A, Bradshaw C, Cape M, Cariou T, Carvalho , Cavan E, Christensen V, Croot P, de Miranda A, Grossmann J, Hidalgo M, Hill S, Hubbard R, Hunter W, Kuhlmann J, Kuznia O, Lockhart K, Lønborg C, Lörinczi L, Luck C, Marsh M, Martin A, Matias A, Mejri R, Morris K, Morys C, Ogbuka J, Oke M, O'Neill B, Ortega M, <strong>Ottmann D.</strong>, Paradis S, Parker R, Petitgas P, Polimene L, Polsenaere P, Porz L, Rastrick S, Reid D, Ritzau Eigaard O, Sailley S, Sala A, Schnoor P, Seixas S, Sutherland-Sherriff A, Türkmen A, Valanko S, Vastenhoud B, Visser A, Walker M, Wisz M, Witting K, Zhang W <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> The Workshop on Assessing the Impact of Fishing on Oceanic Carbon (WKFISHCARBON) was set up to provide ICES and stakeholders with a summary of knowledge on the role of fishing in the process of carbon budgets, sequestration and footprint in the ocean. The workshop addressed the potential impact of fishing on the biological carbon pump (BCP), the possible impacts of bottom trawling on carbon stores in the seabed, as well as considering emissions from fishing vessels. The overall aim was to generate proposals on how to develop an ICES approach to fishing and its role in the ocean carbon budget, and to develop a roadmap for a way forward. The main findings were that knowledge of the BCP in the open ocean was reasonably well developed, but that key gaps existed. In particular, information on the biomass of mesopelagic fish and other biota, and of some of the key processes e.g. fluxes and fish bioenergetics. Knowledge is much weaker for the BCP in shelf seas, where the bulk of fishing occurs. In particular, while biomass of fish was often well quantified, unlike the open ocean, the understanding of the important processes was lacking, particularly for the fate of faecal pellets and deadfall at the seabed. There is extensive scientific knowledge of the impact of fishing on the seabed, but what is un-clear is what it means for seabed carbon storage. There have been numbers of studies, which give a very divided view on this. There has also been open controversy about this in the literature. Physical disturbance to the seabed from fishing can affect sediment transport and has the potential to facilitate remineralization, but precise impacts will depend on habitat, fishing métier, and other environmental factors. From this, it is clear that more research is needed to resolve the controversy, and to quantify the impacts from different fishing gears and on different substrates or habitats in terms of carbon storage. There has been much more research on minimizing fuel use by fishing vessels, and hence emissions, but this has mainly focused on fuel efficiency, fuel use per unit of landed catch, and less on the total emissions. Baselines for fuel use are available at the global level, but are lacking at the national and vessel level. There is a need for standardization of methodologies and protocols, and for improving the uptake of fuel conservation measures by industry, as well as for improving the uptake of existing and potential fuel conservation and efficiency measures by industry. Finally, a roadmap was proposed to develop research and synthesis, on the understandings of the processes involved, the metrics and how to translate this into possible advice for policy-makers. To that end, a further workshop was proposed in 2024.</p> </span>
+	<font size="2"> Bastardie F, Belin A, Bentley J, Berzaghi , Bore A, Bradshaw C, Cape M, Cariou T, Carvalho , Cavan E, Christensen V, Croot P, de Miranda A, Grossmann J, Hidalgo M, Hill S, Hubbard R, Hunter W, Kuhlmann J, Kuznia O, Lockhart K, Lønborg C, Lörinczi L, Luck C, Marsh M, Martin A, Matias A, Mejri R, Morris K, Morys C, Ogbuka J, Oke M, O'Neill B, Ortega M, <strong>Ottmann D.</strong>, Paradis S, Parker R, Petitgas P, Polimene L, Polsenaere P, Porz L, Rastrick S, Reid D, Ritzau Eigaard O, Sailley S, Sala A, Schnoor P, Seixas S, Sutherland-Sherriff A, Türkmen A, Valanko S, Vastenhoud B, Visser A, Walker M, Wisz M, Witting K, Zhang W <br> </font>
+  <div id="absnpr005" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u> The Workshop on Assessing the Impact of Fishing on Oceanic Carbon (WKFISHCARBON) was set up to provide ICES and stakeholders with a summary of knowledge on the role of fishing in the process of carbon budgets, sequestration and footprint in the ocean. The workshop addressed the potential impact of fishing on the biological carbon pump (BCP), the possible impacts of bottom trawling on carbon stores in the seabed, as well as considering emissions from fishing vessels. The overall aim was to generate proposals on how to develop an ICES approach to fishing and its role in the ocean carbon budget, and to develop a roadmap for a way forward. The main findings were that knowledge of the BCP in the open ocean was reasonably well developed, but that key gaps existed. In particular, information on the biomass of mesopelagic fish and other biota, and of some of the key processes e.g. fluxes and fish bioenergetics. Knowledge is much weaker for the BCP in shelf seas, where the bulk of fishing occurs. In particular, while biomass of fish was often well quantified, unlike the open ocean, the understanding of the important processes was lacking, particularly for the fate of faecal pellets and deadfall at the seabed. There is extensive scientific knowledge of the impact of fishing on the seabed, but what is un-clear is what it means for seabed carbon storage. There have been numbers of studies, which give a very divided view on this. There has also been open controversy about this in the literature. Physical disturbance to the seabed from fishing can affect sediment transport and has the potential to facilitate remineralization, but precise impacts will depend on habitat, fishing métier, and other environmental factors. From this, it is clear that more research is needed to resolve the controversy, and to quantify the impacts from different fishing gears and on different substrates or habitats in terms of carbon storage. There has been much more research on minimizing fuel use by fishing vessels, and hence emissions, but this has mainly focused on fuel efficiency, fuel use per unit of landed catch, and less on the total emissions. Baselines for fuel use are available at the global level, but are lacking at the national and vessel level. There is a need for standardization of methodologies and protocols, and for improving the uptake of fuel conservation measures by industry, as well as for improving the uptake of existing and potential fuel conservation and efficiency measures by industry. Finally, a roadmap was proposed to develop research and synthesis, on the understandings of the processes involved, the metrics and how to translate this into possible advice for policy-makers. To that end, a further workshop was proposed in 2024. </div>
+  <span class="readmore-link" onclick="toggleAbstract('absnpr005', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/npr005.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://doi.org/10.17895/ices.pub.24949122.v1"><input type="button" class="favorite styled" value="Journal"></a> 
-	<br> <br> </div>
+  </div> </div> </div></div>
 
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "npr004" src="Illustrations/npr004.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
-	<strong> <font size="4"> Bluefin tuna larval indices in the Balearic archipelago for the management strategy evaluation (“Strict Update” and “Revised Version” for 2001-2019 period) </font> </strong> – <em> ICCAT Collective Volume of Scientifoc Papers </em> (2021) <br>
-	<font size="2">Alvarez-Berastegui D, Tugores MP, Martín M, Leyva L, Manzanares B, Balbín R, <strong>Ottmann D</strong>, Reglero P <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> This document presents the update of the bluefin tuna larval indices from the Balearic Archipelago (Western Mediterranean). The two indices are the “strict updated” developed in 2019 (SCRS/P/2019/055) and the Revised Version, presented to the Group in May 2020 (SCRS/2020/067). The main differences between the two indices are the methods applied to compute the mean and dispersion of the two stage models, and the years included in each index. The revised version interpolates the larval indices for the years 2008 and 2011 for which some icthtipplanton surveys are available. The two indices are updated here with data from 2019 but excludes the 2018 year.</p> </span>
+
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "npr004" src="Illustrations/npr004.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
+	<strong> <font size="4"> Bluefin tuna larval indices in the Balearic archipelago for the management strategy evaluation (“Strict Update” and “Revised Version” for 2001-2019 period) </font> </strong> – <em> ICCAT Collective Volume of Scientifoc Papers </em> (2021)  <br>
+	<font size="2"> Alvarez-Berastegui D, Tugores MP, Martín M, Leyva L, Manzanares B, Balbín R, <strong>Ottmann D</strong>, Reglero P <br> </font>
+  <div id="absnpr004" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u> This document presents the update of the bluefin tuna larval indices from the Balearic Archipelago (Western Mediterranean). The two indices are the “strict updated” developed in 2019 (SCRS/P/2019/055) and the Revised Version, presented to the Group in May 2020 (SCRS/2020/067). The main differences between the two indices are the methods applied to compute the mean and dispersion of the two stage models, and the years included in each index. The revised version interpolates the larval indices for the years 2008 and 2011 for which some icthtipplanton surveys are available. The two indices are updated here with data from 2019 but excludes the 2018 year. </div>
+  <span class="readmore-link" onclick="toggleAbstract('absnpr004', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/npr004.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://www.iccat.int/Documents/CVSP/CV078_2021/n_3/CV078030323.pdf"><input type="button" class="favorite styled" value="Journal"></a> 
-	<br> <br> </div>
+  </div> </div> </div></div>
 
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "npr003" src="Illustrations/npr003.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "npr003" src="Illustrations/npr003.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Índices de abundancia de túnidos en el archipiélago balear </font> </strong> – <em> Informe Mar Balear </em> (2021) <br>
-	<font size="2">Alvarez-Berastegui D, Alemany F, Reglero P, Tugores P, <strong>Ottmann D</strong>, Martín M, Balbín R, Leyva L, Mourre B, Díaz-Barroso L, Tintoré J <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> El área marina que rodea el archipiélago balear es una zona clave para la ecología reproductiva de diferentes especies de atún y otros grandes migradores oceánicos.1 Entre ellas se encuentran especies residentes en el Mediterráneo, como es el caso de la albacora, la melva o el bonito, y otras que pasan gran parte de su vida adulta en el Atlántico y realizan largas migraciones para reproducirse aquí, como por ejemplo el atún rojo. </p> </span>
+	<font size="2"> Alvarez-Berastegui D, Alemany F, Reglero P, Tugores P, <strong>Ottmann D</strong>, Martín M, Balbín R, Leyva L, Mourre B, Díaz-Barroso L, Tintoré J <br> </font>
+  <div id="absnpr003" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u> El área marina que rodea el archipiélago balear es una zona clave para la ecología reproductiva de diferentes especies de atún y otros grandes migradores oceánicos.1 Entre ellas se encuentran especies residentes en el Mediterráneo, como es el caso de la albacora, la melva o el bonito, y otras que pasan gran parte de su vida adulta en el Atlántico y realizan largas migraciones para reproducirse aquí, como por ejemplo el atún rojo. </div>
+  <span class="readmore-link" onclick="toggleAbstract('absnpr003', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/npr003.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://informemarbalear.org/es/pesca/imb-tunids-esp.pdf"><input type="button" class="favorite styled" value="Journal"></a> 
-	<br> <br> </div>
+  </div> </div> </div></div>
 
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "npr002" src="Illustrations/npr002.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "npr002" src="Illustrations/npr002.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
 	<strong> <font size="4"> Bluefin tuna larval indices in the western Mediterranean, ecological and analytical sources of uncertainty </font> </strong> – <em> ICCAT Collective Volume of Scientifoc Papers </em> (2020) <br>
-	<font size="2">Alvarez-Berastegui D, Tugores MP, <strong>Ottmann D</strong>, Martín-Quetglas M, Reglero P <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> The main objective of this study is to provide the knowledge to design adequate sensitivity analyses on the assessment models used for the Eastern stock of Bluefin tuna. We analyze how different configuration for the same environmental variable (temperature in the mixed layer depth) and different modeling approaches (nonlinear Delta-log, delta-gamma, tweedy and bayesian) affects to the variability of the larval indices of the Eastern bluefin tuna from data collected in the Balearic Sea (Western Mediterranean). We also investigate the effects on the index caused from having differences in the total sampled area among years. We used these results to interpolate larval index values in years with not standard larval surveys but with some ichthyoplankton surveys available, and to propose a “revised version” of the index providing parameters of uncertainty.</p> </span>
+	<font size="2"> Alvarez-Berastegui D, Tugores MP, <strong>Ottmann D</strong>, Martín-Quetglas M, Reglero P <br> </font>
+  <div id="absnpr002" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u> The main objective of this study is to provide the knowledge to design adequate sensitivity analyses on the assessment models used for the Eastern stock of Bluefin tuna. We analyze how different configuration for the same environmental variable (temperature in the mixed layer depth) and different modeling approaches (nonlinear Delta-log, delta-gamma, tweedy and bayesian) affects to the variability of the larval indices of the Eastern bluefin tuna from data collected in the Balearic Sea (Western Mediterranean). We also investigate the effects on the index caused from having differences in the total sampled area among years. We used these results to interpolate larval index values in years with not standard larval surveys but with some ichthyoplankton surveys available, and to propose a “revised version” of the index providing parameters of uncertainty. </div>
+  <span class="readmore-link" onclick="toggleAbstract('absnpr002', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/npr002.pdf"><input type="button" class="favorite styled" value="PDF"></a>
 	<a href="https://www.iccat.int/Documents/CVSP/CV078_2021/n_3/CV078030323.pdf"><input type="button" class="favorite styled" value="Journal"></a> 
-	<br> <br> </div>
-
-		<div class="w3-col m2">
-	<p style="float:left"> <img alt = "npr001" src="Illustrations/npr001.png" heigth = "175" width = "175"> </p> </div>
-	<div class="mobilemargin" style="margin-left: 290px">
-	<strong> <font size="4"> Oregon Marine Reserves Ecological Monitoring Synthesis Report 3.1 </font> </strong> – <em> ODFW Scientific and Technical Advisory Committee </em> (2018) <br>
-	<font size="2">Oregon Department of Fish and Wildlife <br> </font>
-	<span class="ellipse">
-	<p align="justify"> <u>Abstract:</u> With marine reserves being a new management tool here in Oregon, the Oregon Legislature has called for an evaluation of the Oregon Marine Reserves Program and a report to the Legislature due on March 1, 2023. This evaluation will reflect upon all aspects of the Program including the management, scientific monitoring, outreach, community engagement, compliance, enforcement, and funding for the five marine reserve sites. It also marks a point where the state will consider if and how marine reserves will continue to be used as a nearshore resource management tool moving into the future. 
-Evaluation of the Oregon Marine Reserves Program will begin in the year 2022, and will be led by an Oregon public university selected by the Scientific and Technical Advisory Committee (STAC). The Oregon Department of Fish and Wildlife’s (ODFW’s) Marine Reserves Program is being tasked with writing a synthesis report, that covers all aspects of the program, in the year 2021 that will be submitted to the university for the evaluation.
-</p> </span>
+  </div> </div> </div></div>
+  
+<div class="paper-entry" data-doi="10.1016/j.ecss.2024.108734" style="overflow: hidden; margin-bottom: 20px; position: relative;">
+  <img class="paper-figure" alt = "npr001" src="Illustrations/npr001.png" heigth = "175">
+  <div style="margin-left: 162px;"> <div class="pub-info">
+	<strong> <font size="4">  Oregon Marine Reserves Ecological Monitoring Synthesis Report 3.1 </font> </strong> – <em> ODFW Scientific and Technical Advisory Committee </em> (2018) <br>
+	<font size="2"> Oregon Department of Fish and Wildlife <br> </font>
+  <div id="absnpr001" class="abstract" style="font-size: 12px; margin-top: 4px;">
+  <u>Abstract:</u> With marine reserves being a new management tool here in Oregon, the Oregon Legislature has called for an evaluation of the Oregon Marine Reserves Program and a report to the Legislature due on March 1, 2023. This evaluation will reflect upon all aspects of the Program including the management, scientific monitoring, outreach, community engagement, compliance, enforcement, and funding for the five marine reserve sites. It also marks a point where the state will consider if and how marine reserves will continue to be used as a nearshore resource management tool moving into the future. 
+Evaluation of the Oregon Marine Reserves Program will begin in the year 2022, and will be led by an Oregon public university selected by the Scientific and Technical Advisory Committee (STAC). The Oregon Department of Fish and Wildlife’s (ODFW’s) Marine Reserves Program is being tasked with writing a synthesis report, that covers all aspects of the program, in the year 2021 that will be submitted to the university for the evaluation. </div>
+  <span class="readmore-link" onclick="toggleAbstract('absnpr001', this)">Read more...</span>
+  <div class="paper-icons">
 	<a href="Papers/npr001.pdf"><input type="button" class="favorite styled" value="PDF"></a>
-		<br> <br> </div>
+  </div> </div> </div></div>
 
 <!-- Second Parallax Image -->
 <div class="bgimg-3 w3-display-container w3-opacity-min" id = "Contact">
@@ -325,6 +388,18 @@ Evaluation of the Oregon Marine Reserves Program will begin in the year 2022, an
 	</div> </footer>
 	
 <script>
+//Abstract
+function toggleAbstract(id, link) {
+  var abs = document.getElementById(id);
+  if (abs.classList.contains("expanded")) {
+    abs.classList.remove("expanded");
+    link.innerHTML = "Read more...";
+  } else {
+    abs.classList.add("expanded");
+    link.innerHTML = "Read less...";
+  }
+}
+
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
